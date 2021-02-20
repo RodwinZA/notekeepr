@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #202124;
+    color: #fdfbfb;
+    font-family: 'Open Sans', sans-serif;
+    height: 100%;
+    width: 100%;
+}
+
+.app-title {
+    font-family: 'Pangolin', cursive;
+    font-size: 36px;
+    padding-top: 40px;
+    text-align: center;
+}
+
+.wrapper {
+    padding: 60px 20px;
+}
+
+.write-note form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.write-note form input {
+    background-color: inherit;
+    border: 2px solid #fdfbfb;
+    border-bottom-style: none;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    color: inherit;
+    font-family: 'Pangolin', cursive;
+    font-size: 18px;
+    outline: none;
+    padding: 20px;
+}
+
+.write-note form textarea {
+    background-color: inherit;
+    border: 2px solid #fdfbfb;
+    border-top-style: none;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    color: inherit;
+    font-family: 'Pangolin', cursive;
+    font-size: 18px;
+    padding: 20px;
+    outline: none;
+}
+
+.write-note form button {
+    align-self: flex-end;
+    background-color: #fdfbfb;
+    border-radius: 4px;
+    border-style: none;
+    color: #202124;
+    cursor: pointer;
+    font-family: 'Pangolin', cursive;
+    font-size: 18px;
+    margin-top: 20px;
+    padding: 5px 0;
+    width: 20%;
+}
+
+.display-notes {
+    margin-top: 40px;
+}
+
+.single-note {
+    border: 1px solid #fdfbfb;
+    border-radius: 8px;
+    margin-bottom: 40px;
+    padding: 20px 20px 40px;
+}
+
+.single-note h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.single-note p {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.single-note button {
+    background-color: inherit;
+    border-style: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.single-note button:hover {
+    text-decoration: underline;
+}
+
+@media screen and (min-width: 550px){
+    .app-title {
+        margin-bottom: 40px;
+    }
+
+    .wrapper {
+        padding: 0 40px;
+    }
+}
+
+@media screen and (min-width: 700px){
+    .wrapper {
+        padding: 0 80px;
+    }
+}
+
+@media screen and (min-width: 900px){
+    .app-title {
+        margin-bottom: 60px;
+    }
+
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 60px;
+    }
+
+    .write-note {
+        flex-basis: 35%;
+        position: sticky;
+        top: 0;
+    }
+
+    .display-notes {
+        flex-basis: 55%;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .wrapper {
+        padding: 0 100px;
+    }
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Pangolin&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>NoteKeepr</title>
+</head>
+<body>
+    <h1 class="app-title">NoteKeepr</h1>
+    <div class="wrapper">
+        <div class="write-note">
+            <form action="/" method="POST">
+                <input type="text" placeholder="Title" name="title" autocomplete="false">
+                <textarea name="note" cols="30" rows="10" placeholder="Add Your Note"></textarea>
+                <button type="submit">Save</button>
+            </form>
+        </div>
+        <div class="display-notes">
+            <form action="/delete" method="POST">
+                <% notes.forEach((note) => { %>
+                <div class="single-note">
+                        <h2><%= note.title %></h2>
+                        <p><%= note.note %></p>
+                        <button type="submit" name="deleteBtn" value="<%= note._id %>">Remove</button>
+                </div>
+                <% }); %>
+            </form>
+        </div>
+    </div>
+    <script src="/js/script.js"></script>
+</body>
+</html>
